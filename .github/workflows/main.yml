@@ -19,6 +19,7 @@ jobs:
           container-name: microros-base
           build-directory: base
           docker-tag: galactic
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   build-agent:
     runs-on: ubuntu-latest
     needs: build-base
@@ -30,6 +31,7 @@ jobs:
           container-name: microros-agent
           build-directory: micro-ROS-Agent
           docker-tag: galactic
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   build-demos:
     runs-on: ubuntu-latest
     needs: build-base
@@ -41,6 +43,7 @@ jobs:
           container-name: microros-demos
           build-directory: micro-ROS-demos
           docker-tag: galactic
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   build-static-library-builder:
     runs-on: ubuntu-latest
     steps:
@@ -51,3 +54,4 @@ jobs:
           container-name: microros-static-library-builder
           build-directory: micro-ROS-static-library-builder
           docker-tag: galactic
+          github-token: ${{ secrets.GITHUB_TOKEN }}
