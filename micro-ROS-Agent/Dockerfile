@@ -1,4 +1,4 @@
-FROM microros/base:galactic
+FROM ghcr.io/conroy-cheers/microros-base:galactic
 
 WORKDIR /uros_ws
 RUN . /opt/ros/$ROS_DISTRO/setup.sh \
