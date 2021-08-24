@@ -1,0 +1,6 @@
+version: "1"
+rules:
+  - base: galactic
+    upstream: micro-ROS:galactic
+    mergeMethod: rebase
+    mergeUnstable: false
